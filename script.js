@@ -15,7 +15,7 @@ class HoverIntent {
     });
     
     this.elem.addEventListener('mouseenter', function() {
-      new Promise(self.isSlowMove).then(self.over);
+      new Promise(self.isSlowMove.bind(self)).then(self.over);
     });
   }
   isSlowMove(isSlow, isFast) {
